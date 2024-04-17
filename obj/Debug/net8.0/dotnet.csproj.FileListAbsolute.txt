@@ -1,0 +1,15 @@
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\bin\Debug\net8.0\dotnet.exe
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\bin\Debug\net8.0\dotnet.deps.json
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\bin\Debug\net8.0\dotnet.runtimeconfig.json
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\bin\Debug\net8.0\dotnet.dll
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\bin\Debug\net8.0\dotnet.pdb
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.AssemblyInfoInputs.cache
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.AssemblyInfo.cs
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.csproj.CoreCompileInputs.cache
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.sourcelink.json
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.dll
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\refint\dotnet.dll
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.pdb
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\dotnet.genruntimeconfig.cache
+C:\Users\isaac\OneDrive\Área de Trabalho\dotnet\obj\Debug\net8.0\ref\dotnet.dll
