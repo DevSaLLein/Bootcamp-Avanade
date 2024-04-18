@@ -1,1 +1,10 @@
 - dotnet new console
+
+decimal preco = 1.80M
+
+// 1.8
+double altura = 1.80
+
+
+// 1.80
+altura.toString("0.00")
