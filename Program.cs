@@ -1,4 +1,5 @@
-﻿using dotnet.model;
+﻿using System.Runtime.InteropServices;
+using dotnet.model;
 
 internal class Program
 {
@@ -103,5 +104,45 @@ internal class Program
         // } while(numeroDigitado != 0);
 
         // Console.WriteLine(soma);
+
+        string option;
+        bool exibirMenu = false;
+
+        while(exibirMenu)
+        {
+            Console.Clear();
+            Console.WriteLine("Digite uma opção");
+            Console.WriteLine("1 - Cadastro");
+            Console.WriteLine("2 - Consulta");
+            Console.WriteLine("3 - Exclusão");
+            Console.WriteLine("4 - Sair"); 
+
+            option = Console.ReadLine();
+            
+            switch(option)
+            {
+                case "1":
+                    Console.WriteLine("cadastro");
+                    break;
+                    
+                case "2":
+                    Console.WriteLine("consultar");
+                    break;
+            
+                case "3":
+                    Console.WriteLine("exclusão");
+                    break;
+
+                case "4":
+                    Console.WriteLine("sair");
+                    // Environment.Exit(0); 
+                    exibirMenu = false;
+                    break;
+
+                default:
+                    Console.WriteLine("Opção inválida");
+                    break;
+            }
+        }
     } 
 }
