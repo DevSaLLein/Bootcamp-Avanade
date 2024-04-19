@@ -74,8 +74,34 @@ internal class Program
         //         break;
         // }
 
-        Calculadora calculadora = new Calculadora();
 
-        calculadora.Somar(1, 4);        
+        // Calculadora calculadora = new Calculadora();
+        // calculadora.Somar(1, 4);
+
+        // for(int contador = 0; contador <= 10; contador++) 
+        // {
+        //     Console.WriteLine(contador);
+        // }  
+
+        // int contadorWhile = 0;
+        // while(contadorWhile <= 10) 
+        // {
+        //     Console.WriteLine(contadorWhile); 
+        //     contadorWhile++;
+        // }      
+
+
+        // int numeroDigitado, soma = 0;
+
+        // do
+        // {
+        //     Console.WriteLine("Um número para ser somando");
+        //     numeroDigitado = Convert.ToInt32(Console.ReadLine());
+
+        //     soma += numeroDigitado;
+
+        // } while(numeroDigitado != 0);
+
+        // Console.WriteLine(soma);
     } 
 }
