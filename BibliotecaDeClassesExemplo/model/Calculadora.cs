@@ -1,4 +1,5 @@
-namespace dotnet.model
+namespace BibliotecaDeClassesExemplo.model
+
 {
     public class Calculadora
     {

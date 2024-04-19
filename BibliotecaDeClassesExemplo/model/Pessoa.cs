@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
+namespace BibliotecaDeClassesExemplo.model
 
-namespace dotnet.model
 {
     public class Pessoa
     {
@@ -16,6 +10,8 @@ namespace dotnet.model
         {
             return $"Olá, meu nome é {Nome} e tenho {Idade} anos.";   
         }
+
+        
     }
 }
  

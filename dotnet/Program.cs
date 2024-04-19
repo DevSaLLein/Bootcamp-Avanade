@@ -1,18 +1,17 @@
-﻿using System.Runtime.InteropServices;
-using dotnet.model;
+﻿using BibliotecaDeClassesExemplo.model;
 
 internal class Program
 {
     private static void Main()
-    {
-        Pessoa devsallein = new Pessoa
+    {    
+        DateTime dataAtual = DateTime.Now;
+
+       Pessoa pessoa = new Pessoa
         {
             Nome = "Isaac",
             Idade = 17
         };
-
-        DateTime dataAtual = DateTime.Now;
-
+        
         // Console.WriteLine(dataAtual.ToString("dd/MM/yyyy"));
         // Console.WriteLine(dataAtual.ToString("HH:mm:FF"));
 
