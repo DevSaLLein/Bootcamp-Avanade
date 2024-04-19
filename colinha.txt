@@ -1,6 +1,6 @@
 - dotnet new console
 
-decimal preco = 1.80M
+decimal preço = 1.80M
 
 // 1.8
 double altura = 1.80
@@ -8,3 +8,5 @@ double altura = 1.80
 
 // 1.80
 altura.toString("0.00")
+
+dotnet new console --framework 5.0
