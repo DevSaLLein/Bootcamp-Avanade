@@ -175,14 +175,18 @@ namespace dotnet
 
             List<string> ListaDeString = new List<string>();
 
-            ListaDeString.Add("DevSaLLein");
-            ListaDeString.Add("Developer");
-            ListaDeString.Add("C#");
+            // ListaDeString.Add("DevSaLLein");
+            // ListaDeString.Add("Developer");
+            // ListaDeString.Add("C#");
 
-            foreach(string valor in ListaDeString) 
-            {
-                Console.WriteLine(valor);
-            }
+            // foreach(string valor in ListaDeString) 
+            // {
+            //     Console.WriteLine(valor);
+            // }
+
+            ListaDeString.Add(Console.ReadLine());
+
+            Console.WriteLine(ListaDeString[0]);
         } 
     }
 }
