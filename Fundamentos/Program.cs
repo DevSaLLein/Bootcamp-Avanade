@@ -165,14 +165,6 @@ namespace dotnet
             int[] arrayInteiroDobrado = new int[arrayInteiro.Length * 2];
             Array.Copy(arrayInteiro, arrayInteiroDobrado, arrayInteiro.Length);
             
-
-
-
-
-
-
-
-
             List<string> ListaDeString = new List<string>();
 
             // ListaDeString.Add("DevSaLLein");
