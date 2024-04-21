@@ -26,6 +26,10 @@ namespace Propriedades_métodos_e_construtores.models
             } 
         }
 
+        public string? Sobrenome { get; set; }
+
+        public string? NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+
         public int Idade 
 
         {
@@ -42,6 +46,6 @@ namespace Propriedades_métodos_e_construtores.models
             }
         }
 
-        public string ApresentarPessoa() => $"Olá, meu nome é {Nome} e eu tenho {Idade} anos";
+        public string ApresentarPessoa() => $"Olá, meu nome é {NomeCompleto} e eu tenho {Idade} anos";
     }
 }
