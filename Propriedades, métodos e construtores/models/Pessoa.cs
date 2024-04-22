@@ -1,13 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Xml.Schema;
-
 namespace Propriedades_métodos_e_construtores.models
 {
     public class Pessoa
     {
+        public Pessoa(){}
+        public Pessoa(string nome, string sobrenome, int idade)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Idade = idade;
+        }
+
         private string? _nome;
         private int _idade;
 

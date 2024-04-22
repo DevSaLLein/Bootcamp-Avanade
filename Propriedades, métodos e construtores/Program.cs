@@ -5,18 +5,12 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Pessoa devsallein = new Pessoa
-        {
-            Nome = "Isaac",
-            Sobrenome = "Andrade",
-            Idade = 17,
-        };
+        Pessoa p1 = new Pessoa();
+        Pessoa p2 = new Pessoa("Isaac", "Andrade", 17);
 
+        Curso cursoEngenhariaDeSoftware = new Curso("Engenharia de Software");
 
-        Curso cursoEngenhariaDeSoftware = new Curso();
-        cursoEngenhariaDeSoftware.NomeDoCurso = "Engenharia de Software";
-
-        Console.WriteLine(cursoEngenhariaDeSoftware.AdicionarAluno(devsallein));
+        Console.WriteLine(cursoEngenhariaDeSoftware.AdicionarAluno(p2));
         cursoEngenhariaDeSoftware.listarAlunos();
     }
 } 

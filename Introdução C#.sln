@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fundamentos", "Fundamentos\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propriedades, métodos e construtores", "Propriedades, métodos e construtores\Propriedades, métodos e construtores.csproj", "{CF0C00E8-39EB-4719-A00A-88CD697AEA49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulando valores", "Manipulando valores\Manipulando valores.csproj", "{88350B75-8EE8-44AB-B0B3-5943449C7881}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +36,9 @@ Global
 		{CF0C00E8-39EB-4719-A00A-88CD697AEA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF0C00E8-39EB-4719-A00A-88CD697AEA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF0C00E8-39EB-4719-A00A-88CD697AEA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

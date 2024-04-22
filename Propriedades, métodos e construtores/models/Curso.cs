@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Propriedades_métodos_e_construtores.models;
 
 namespace Propriedades__métodos_e_construtores.models
-{
-    public class Curso
+{ 
+    public class Curso(string NomeDoCurso)
     {
-        public string? NomeDoCurso { get; set; }
+        public string? NomeDoCurso { get; set; } = NomeDoCurso;
         public List<Pessoa> Alunos { get; set; } = new List<Pessoa>();
 
         public string AdicionarAluno(Pessoa pessoa)
