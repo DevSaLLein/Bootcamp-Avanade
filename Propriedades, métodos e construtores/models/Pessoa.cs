@@ -3,6 +3,7 @@ namespace Propriedades_métodos_e_construtores.models
     public class Pessoa
     {
         public Pessoa(){}
+
         public Pessoa(string nome, string sobrenome, int idade)
         {
             Nome = nome;
@@ -15,7 +16,7 @@ namespace Propriedades_métodos_e_construtores.models
 
         public string Nome 
         {
-            get => _nome?.ToUpper();
+            get => _nome.ToUpper();
             
             set
             {

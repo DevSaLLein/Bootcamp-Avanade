@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulando valores", "Mani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions&collections", "Exceptions&collections\Exceptions&collections.csproj", "{84ABD929-C16E-4D55-A67D-F0695A84B3A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuplas, Operadores ternários e Destruction", "Tuplas, Operadores ternários e Destruction\Tuplas, Operadores ternários e Destruction.csproj", "{0EADDF82-3022-4DE2-AEF4-A33F57D589DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,5 +48,9 @@ Global
 		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EADDF82-3022-4DE2-AEF4-A33F57D589DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EADDF82-3022-4DE2-AEF4-A33F57D589DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EADDF82-3022-4DE2-AEF4-A33F57D589DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EADDF82-3022-4DE2-AEF4-A33F57D589DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
