@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propriedades, métodos e co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulando valores", "Manipulando valores\Manipulando valores.csproj", "{88350B75-8EE8-44AB-B0B3-5943449C7881}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions&collections", "Exceptions&collections\Exceptions&collections.csproj", "{84ABD929-C16E-4D55-A67D-F0695A84B3A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,5 +42,9 @@ Global
 		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88350B75-8EE8-44AB-B0B3-5943449C7881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84ABD929-C16E-4D55-A67D-F0695A84B3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
