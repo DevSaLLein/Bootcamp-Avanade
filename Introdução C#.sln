@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuget, Serializar e Atribut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapulamento, Herança e Polimorfismo", "Encapulamento, Herança e Polimorfismo\Encapulamento, Herança e Polimorfismo.csproj", "{FC7B28BD-D9DA-4F40-8C21-B28AC20D7725}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes abstratas & Interfaces", "Classes abstratas & Interfaces\Classes abstratas & Interfaces.csproj", "{0BAE8077-199A-4863-8944-7AB970DF62DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,5 +66,9 @@ Global
 		{FC7B28BD-D9DA-4F40-8C21-B28AC20D7725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC7B28BD-D9DA-4F40-8C21-B28AC20D7725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC7B28BD-D9DA-4F40-8C21-B28AC20D7725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BAE8077-199A-4863-8944-7AB970DF62DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BAE8077-199A-4863-8944-7AB970DF62DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BAE8077-199A-4863-8944-7AB970DF62DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BAE8077-199A-4863-8944-7AB970DF62DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
