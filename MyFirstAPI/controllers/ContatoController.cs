@@ -13,10 +13,14 @@ namespace MyFirstAPI.controllers
         [HttpPost]
         public IActionResult CreateContato(ContatoModel contato)
         {
-            _context.Add(contato);
+            ContatoModel contatoToCreate = _context.Contatos.Find(contato);
+
+            if(contatoToCreate != null) return Conflict("Contato already exists");
+
+            _context.Add(contatoToCreate);
             _context.SaveChanges();
 
-            return Ok(contato);
+            return Created();
         }
 
         [HttpGet]
@@ -33,6 +37,16 @@ namespace MyFirstAPI.controllers
             if(contatoById == null) return NotFound("Contato not found");
 
             return Ok(contatoById);
+        }
+
+        [HttpGet("ObterPorNome/{nomeContato}")]
+        public IActionResult GetContatoByNome(string nomeContato)
+        {
+            ContatoModel contatos = (ContatoModel) 
+                _context.Contatos.Where(contato => contato.Nome.Contains(nomeContato))
+            ;
+
+            return Ok(contatos);
         }
 
         [HttpPut("{id}")]
@@ -66,3 +80,6 @@ namespace MyFirstAPI.controllers
         }
     }
 }
+
+// PUT => Informações completas
+// PATCH => Informações imcompletas
