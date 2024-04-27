@@ -10,3 +10,6 @@ double altura = 1.80
 altura.toString("0.00")
 
 dotnet new console --framework 5.0
+
+dotnet new webapi
+dotnet watch run
