@@ -4,7 +4,7 @@ namespace MyFirstAPI.controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UsuarioController : Controller
+    public class UsuarioController : ControllerBase
     {
         private readonly ILogger<UsuarioController> _logger;
 
@@ -15,13 +15,13 @@ namespace MyFirstAPI.controllers
 
         public IActionResult Index()
         {
-            return View();
+            return Ok();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View("Error!");
+            return Ok("Error!");
         }
 
         [HttpGet("ObterObjeto")]
