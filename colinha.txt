@@ -16,6 +16,10 @@ dotnet watch run
 
 dotnet tool install --global dotnet-ef
 
+dotnet-ef migrations add CriacaoTabelaContato
+
+dotnet-ef database update
+
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.MySql
 dotnet add package Microsoft.EntityFrameworkCore.PostgreSql
