@@ -20,7 +20,7 @@ namespace MyFirstAPI.controllers
             _context.Add(contatoToCreate);
             _context.SaveChanges();
 
-            return Created();
+            return CreatedAtAction(nameof(GetContatoById), new {id = contato.Id});
         }
 
         [HttpGet]

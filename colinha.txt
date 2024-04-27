@@ -16,8 +16,10 @@ dotnet watch run
 
 dotnet tool install --global dotnet-ef
 
+-> Criar migration
 dotnet-ef migrations add CriacaoTabelaContato
 
+-> Aplicar migration
 dotnet-ef database update
 
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
