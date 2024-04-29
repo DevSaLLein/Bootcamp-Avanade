@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MyFirstAPI.Context;
 using MyFirstAPI.models;
 
-namespace MyFirstAPI.controllers
+namespace MyFirstAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

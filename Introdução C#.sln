@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes abstratas & Interfa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstAPI", "MyFirstAPI\MyFirstAPI.csproj", "{16835462-8A27-44A5-A9F7-EBEC14EA22FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitáriosClasse", "TestesUnitáriosClasse\TestesUnitáriosClasse.csproj", "{EA51BE1D-A6D4-43E6-BF8D-E85C11FDF4D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitáriosX", "TestesUnitáriosX\TestesUnitáriosX.csproj", "{117184F5-9719-436F-8C68-4902989BC3A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,5 +80,13 @@ Global
 		{16835462-8A27-44A5-A9F7-EBEC14EA22FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16835462-8A27-44A5-A9F7-EBEC14EA22FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16835462-8A27-44A5-A9F7-EBEC14EA22FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA51BE1D-A6D4-43E6-BF8D-E85C11FDF4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA51BE1D-A6D4-43E6-BF8D-E85C11FDF4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA51BE1D-A6D4-43E6-BF8D-E85C11FDF4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA51BE1D-A6D4-43E6-BF8D-E85C11FDF4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117184F5-9719-436F-8C68-4902989BC3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117184F5-9719-436F-8C68-4902989BC3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117184F5-9719-436F-8C68-4902989BC3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117184F5-9719-436F-8C68-4902989BC3A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
