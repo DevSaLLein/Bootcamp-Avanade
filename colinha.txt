@@ -27,3 +27,5 @@ dotnet add package Microsoft.EntityFrameworkCore.MySql
 dotnet add package Microsoft.EntityFrameworkCore.PostgreSql
 
 dotnet new xunit
+
+dotnet test
