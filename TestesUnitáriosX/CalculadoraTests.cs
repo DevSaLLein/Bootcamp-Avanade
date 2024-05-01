@@ -4,7 +4,6 @@ namespace TestesUnitáriosX;
 
 public class CalculadoraTests
 {
-
     private CalculadoraService _calculadora;
 
     public CalculadoraTests(){
