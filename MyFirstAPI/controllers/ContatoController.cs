@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyFirstAPI.Context;
+using MyFirstAPI.DTOs;
 using MyFirstAPI.models;
 
 namespace MyFirstAPI.Controllers
@@ -11,11 +13,11 @@ namespace MyFirstAPI.Controllers
         private readonly AgendaContext _context = context;
 
         [HttpPost]
-        public IActionResult CreateContato(ContatoModel contato)
+        public IActionResult CreateContato(ContatoModel contato, CancellationToken token)
         {
-            ContatoModel contatoToCreate = _context.Contatos.Find(contato);
+            bool contatoToCreate = _context.Contatos.Any(contatoDB => contatoDB.Nome == contato.Nome);
 
-            if(contatoToCreate != null) return Conflict("Contato already exists");
+            if(contatoToCreate == true) return Conflict("Contato already exists");
 
             _context.Add(contatoToCreate);
             _context.SaveChanges();
@@ -24,9 +26,17 @@ namespace MyFirstAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllContatos()
+        public IActionResult GetAllContatos(CancellationToken token)
         {
-            return Ok(_context.Contatos.ToList());
+            var contatos = 
+                _context.Contatos
+                    .Select(contatoDB => new ContatoDto(contatoDB.Id, contatoDB.Nome, contatoDB.Telefone))
+                    .AsNoTracking()
+                    .ToList()
+                ;
+            ;
+
+            return Ok(contatos);
         }
 
         [HttpGet("{id}")]
@@ -36,44 +46,50 @@ namespace MyFirstAPI.Controllers
 
             if(contatoById == null) return NotFound("Contato not found");
 
-            return Ok(contatoById);
+            ContatoDto contatoDto = new ContatoDto(contatoById.Id, contatoById.Nome, contatoById.Telefone);
+
+            return Ok(contatoDto);
         }
 
         [HttpGet("ObterPorNome/{nomeContato}")]
-        public IActionResult GetContatoByNome(string nomeContato)
+        public IActionResult GetContatoByNome(string nomeContato, CancellationToken token)
         {
             ContatoModel contatos = (ContatoModel) 
-                _context.Contatos.Where(contato => contato.Nome.Contains(nomeContato))
+                _context.Contatos
+                    .Where(contatoDB => contatoDB.Nome.Contains(nomeContato))
+                    .Select(contato => new ContatoDto(contato.Id, contato.Nome, contato.Telefone))
+                    .AsNoTracking()
+                ;
             ;
 
             return Ok(contatos);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateContato(int id, ContatoModel contato)
+        public IActionResult UpdateContato(int id, ContatoModel contato, CancellationToken token)
         {
             ContatoModel contatoById = _context.Contatos.Find(id);
 
             if(contatoById == null) return NotFound("Contato not found");
 
-            contatoById.Nome = contato.Nome;
-            contatoById.Telefone = contato.Telefone;
-            contatoById.Ativo = contato.Ativo;
+            contatoById.UpdateContact(contato.Nome, contato.Telefone, contato.Ativo);
 
             _context.Contatos.Update(contatoById);
             _context.SaveChanges();
+
+            ContatoDto contatoDto = new ContatoDto(contatoById.Id, contatoById.Nome, contatoById.Telefone);
             
-            return Ok(contatoById);
+            return Ok(contatoDto);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteContato(int id)
+        public IActionResult DeleteContato(int id, CancellationToken token)
         {
             ContatoModel contatoById = _context.Contatos.Find(id);
             
             if(contatoById == null) return NotFound("Contato not found");
 
-            _context.Contatos.Remove(contatoById);
+            contatoById.DesativarContact();
             _context.SaveChanges();
 
             return NoContent();
