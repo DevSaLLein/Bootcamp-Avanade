@@ -3,97 +3,56 @@ using Microsoft.EntityFrameworkCore;
 using MyFirstAPI.Context;
 using MyFirstAPI.DTOs;
 using MyFirstAPI.models;
+using MyFirstAPI.Repository;
 
 namespace MyFirstAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ContatoController(AgendaContext context) : ControllerBase
+    public class ContatoController(ContatoRepository repository) : ControllerBase
     {
-        private readonly AgendaContext _context = context;
+        private readonly ContatoRepository _repository = repository;
 
-        [HttpPost]
-        public IActionResult CreateContato(ContatoModel contato, CancellationToken token)
-        {
-            bool contatoToCreate = _context.Contatos.Any(contatoDB => contatoDB.Nome == contato.Nome);
-
-            if(contatoToCreate == true) return Conflict("Contato already exists");
-
-            _context.Add(contatoToCreate);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetContatoById), new {id = contato.Id});
-        }
 
         [HttpGet]
-        public IActionResult GetAllContatos(CancellationToken token)
-        {
-            var contatos = 
-                _context.Contatos
-                    .Select(contatoDB => new ContatoDto(contatoDB.Id, contatoDB.Nome, contatoDB.Telefone))
-                    .AsNoTracking()
-                    .ToList()
-                ;
-            ;
+        async public Task<ActionResult<List<ContatoModel>>> GetAllContacts(CancellationToken token){
+
+            List<ContatoModel> contatos = await _repository.GetAllContacts(token);
 
             return Ok(contatos);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetContatoById(int id)
-        {
-            ContatoModel contatoById = _context.Contatos.Find(id);
+        [HttpGet("{id:int}")]
+        async public Task<ActionResult<ContatoModel>> GetOneContact(int id, CancellationToken token){
 
-            if(contatoById == null) return NotFound("Contato not found");
+            ContatoModel contato = await _repository.GetOneContact(id, token);
 
-            ContatoDto contatoDto = new ContatoDto(contatoById.Id, contatoById.Nome, contatoById.Telefone);
-
-            return Ok(contatoDto);
+            return Ok(contato);
         }
 
-        [HttpGet("ObterPorNome/{nomeContato}")]
-        public IActionResult GetContatoByNome(string nomeContato, CancellationToken token)
-        {
-            ContatoModel contatos = (ContatoModel) 
-                _context.Contatos
-                    .Where(contatoDB => contatoDB.Nome.Contains(nomeContato))
-                    .Select(contato => new ContatoDto(contato.Id, contato.Nome, contato.Telefone))
-                    .AsNoTracking()
-                ;
-            ;
+        [HttpPost]
+        async public Task<ActionResult<ContatoModel>> CreateContact([FromBody] ContatoDto dto, CancellationToken token){
 
-            return Ok(contatos);
+            ContatoModel contato = await _repository.CreateContact(dto, token);
+
+            return Ok(contato);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateContato(int id, ContatoModel contato, CancellationToken token)
-        {
-            ContatoModel contatoById = _context.Contatos.Find(id);
+        [HttpPut("{id:int}")]
+        async public Task<ActionResult<ContatoModel>> UpdateContact(int id, [FromBody] ContatoDto dto, CancellationToken token){
+            ContatoModel contato = await _repository.UpdateContact(id, dto, token);
 
-            if(contatoById == null) return NotFound("Contato not found");
-
-            contatoById.UpdateContact(contato.Nome, contato.Telefone, contato.Ativo);
-
-            _context.Contatos.Update(contatoById);
-            _context.SaveChanges();
-
-            ContatoDto contatoDto = new ContatoDto(contatoById.Id, contatoById.Nome, contatoById.Telefone);
-            
-            return Ok(contatoDto);
+            return Ok(contato);
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteContato(int id, CancellationToken token)
+        [HttpDelete("{id:int]}")]
+        async public Task<ActionResult<bool>> DeleteContact(int id, CancellationToken token)
         {
-            ContatoModel contatoById = _context.Contatos.Find(id);
-            
-            if(contatoById == null) return NotFound("Contato not found");
+            var deleted = await _repository.DeleteContact(id, token);
 
-            contatoById.DesativarContact();
-            _context.SaveChanges();
-
-            return NoContent();
+            return Ok(deleted);
         }
+
     }
 }
 

@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using MyFirstAPI.Context;
+using MyFirstAPI.Interfaces;
+using MyFirstAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddScoped<AgendaContext>();
+builder.Services.AddScoped<IContato, ContatoRepository>();
 
 builder.Services.AddDbContext<AgendaContext>
 (

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using MyFirstAPI.Context.Map;
 using MyFirstAPI.models;
 
 
@@ -14,7 +15,13 @@ namespace MyFirstAPI.Context
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
 
             // optionsBuilder.EnableSensitiveDataLogging();
-            base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ContatoMap());
+            
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<ContatoModel> Contatos { get; set; }
