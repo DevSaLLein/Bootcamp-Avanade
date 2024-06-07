@@ -11,7 +11,7 @@ altura.toString("0.00")
 
 dotnet new console --framework 5.0
 
-dotnet new webapi
+dotnet new webapi -o api
 dotnet watch run
 
 dotnet tool install --global dotnet-ef

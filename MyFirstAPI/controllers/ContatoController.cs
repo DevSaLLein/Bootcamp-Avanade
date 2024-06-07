@@ -13,7 +13,6 @@ namespace MyFirstAPI.Controllers
     {
         private readonly ContatoRepository _repository = repository;
 
-
         [HttpGet]
         async public Task<ActionResult<List<ContatoModel>>> GetAllContacts(CancellationToken token){
 
